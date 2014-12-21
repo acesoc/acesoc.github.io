@@ -1,0 +1,449 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+/*** GENERAL ***/
+@font-face {
+	font-family:"PF Centro Slab Pro Thin";
+	src:url(../fonts/PFCentroSlabPro-Thin.otf);
+}
+
+@font-face {
+	font-family:SimSun-ExtB;
+	src:url(../fonts/simsunb.ttf);
+}
+
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+	text-decoration:none;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color:#DDD;
+    background: #101010;
+    overflow: hidden;
+	font-family:"PF Centro Slab Pro Thin";
+}
+
+.highlight {
+	color:#41b672;
+}
+
+::-webkit-scrollbar {
+      width: 10px;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+      background-color:#101010;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(100,100,100, 0.5); 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color:#101010;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+.menu {
+	z-index:1000;
+	visibility:visible;
+	left:-100%;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+#mb {
+	z-index:9990;
+	position:absolute;
+	left:25px;
+	top:30px;
+	background-color:transparent;
+	color:#DDD;
+	font-family:"PF Centro Slab Pro Thin";
+	letter-spacing:0.2em;
+	text-align:center;
+	font-weight:bold;
+	font-size:16px;
+	padding:8px;
+	cursor:pointer;
+	width:80px;
+}
+
+#change {
+	z-index:9990;
+	position:absolute;
+	right:25px;
+	top:20px;
+	background-color:transparent;
+	color:#DDD;
+	font-family:"PF Centro Slab Pro Thin";
+	letter-spacing:0.2em;
+	text-align:center;
+	font-weight:bold;
+	font-size:16px;
+	padding:8px;
+	cursor:pointer;
+	width:120px;
+}
+
+.snippet {
+	position:absolute;
+	font-family:"Courier New", Courier, monospace;
+	color:#EEE;
+	font-weight:bold;
+	height:inherit;
+	width:inherit;
+	z-index:-99;
+	cursor:default;
+	-webkit-transform:rotate(0deg);
+}
+
+.head {
+	position:absolute;
+	width: 100%;
+	height: 15%;
+	z-index:0;
+	top:0;
+	background:rgba(25, 25, 25, 0.5);
+}
+.head h1 {
+    position: relative;
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: 6px;
+    margin: 0;
+    top: 32%;
+    width: 100%;
+    text-align: center;
+	float:right;
+    word-spacing: -0em;
+	letter-spacing: -0.03em;
+	cursor:default;
+	font-family:SimSun-ExtB;
+}
+
+.container {
+	position:absolute;
+	width:100%;
+	height:85%;
+	top: 15%;
+	//overflow-y:auto;
+}
+
+#smenu {
+	height:100%;
+	width:16%;
+	background:rgba(25, 25, 25, 0.97);
+	float:left;
+	top:50%;
+	z-index:8000;
+	//opacity:0.95;
+}
+
+#dulll {
+	height:100%;
+	width:84.2%;
+	position:relative;
+	background:#191919;
+	float:right;
+	opacity:0;
+	z-index:-999;
+}
+
+.bmenu{
+    padding: 0px;
+    margin: 0 0 10px 0;
+    position: relative;
+	width:16%;
+	font-family:"PF Centro Slab Pro Thin";
+}
+
+.bmenu li{
+    font-size: 40px;
+    display: block;
+	cursor:pointer;
+	padding-bottom:40px;
+	padding-left:10px;
+}
+
+.bmenu li a{
+    color: transparent;
+    display: block;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px #fff;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.bmenu:hover li a{
+    text-shadow: 0px 0px 6px #fff;
+}
+
+.bmenu li a:hover{
+    //color: #fff;
+	color: #41b672;
+    text-shadow: 0px 0px 1px #fff;
+    padding-left: 10px;
+}
+
+#center2 {
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0px;
+   -webkit-transform: translateY(28%);
+   -moz-transform: translateY(28%);
+   -ms-transform: translateY(28%);
+   transform: translateY(28%);
+}
+
+#acelogo {
+	height:120px;
+	padding-top:20px;
+}
+
+#clicksheet {
+	cursor:default;
+}
+
+
+/*** CONTACT ***/
+.conhead {
+	position:relative;
+	width:100%;
+	height:8%;
+	top: 0%;
+}
+.conhead h2 {
+	text-align:center;
+	padding-top:10px;
+}
+
+.conbody {
+	position:relative;
+	width: 100%;
+	height:92%;
+}
+
+.clubl, .clubr {
+	position:relative;
+	width:35%;
+	height:42.5%;
+	background:rgba(0,0,0, 0.3);
+	z-index:0;
+	text-align:center;
+	font-size:large;
+}
+.clubl {
+	float:left;
+	left:10%;
+}
+.clubr {
+	float:right;
+	right:10%;
+}
+.clubt {
+	top:5%;
+}
+.clubb {
+	top:10%;
+}
+.clubl h2, .clubr h2 {
+	
+}
+
+
+/*** EVENTS ***/
+div.ui-datepicker {
+	height:60%;
+	width:80%;
+	font-size:25px;
+	background: none;
+	border:none;
+	top:5%;
+	left:10%;
+	position:relative;
+}
+
+#cal {
+	position:relative;
+	width:35%;
+	height:70%;
+	top:15%;
+	left:10%;
+	background:rgba(0,0,0, 0.3);
+	float:left;
+	z-index:0;
+}
+
+.ui-datepicker td {
+	opacity: 0.9;
+	background:none;
+}
+
+.ui-datepicker .high a {
+	background-color: #41b672 !important;
+   background-image :none !important;
+   color: #000 !important;
+   font-weight:bold !important;
+   border: #eee !important;
+   border-width:thick !important;
+}
+
+.ui-datepicker .low a {
+	background-color: #7ee07e !important;
+   background-image :none !important;
+   color: #000 !important;
+   font-weight:bold !important;
+   border: #eee !important;
+   border-width:thick !important;
+}
+
+
+.event {
+	position:absolute;
+	visibility:hidden;
+	padding-left:8%;
+	padding-right: 8%;
+	z-index:0;
+	width:100%;
+}
+
+.v1 {
+	display:table;
+}
+.v2 {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.event h1 {
+	text-align:center;
+	padding-top:30%;
+	font-size:xx-large;
+}
+.event h2 {
+	text-align:center;
+	font-size:xx-large;
+	color: #41b672;
+}
+.event p {
+	font-size:x-large;
+}
+
+.current {
+	top:0;
+	left:0;
+	visibility:visible;
+	z-index:50;
+}
+
+#eve {
+	position:relative;
+	width:35%;
+	height:70%;
+	right:10%;
+	top:15%;
+	background:rgba(0,0,0, 0.3);
+	float:right;
+	z-index:0;
+	overflow-y:auto;
+}
+
+
+/*** HOME ***/
+#everything {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#homepage h1 {
+    position: relative;
+    font-size: 55px;
+    line-height: 1;
+    letter-spacing: 6px;
+    margin: 0;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+	float:right;
+    word-spacing: -0em;
+	letter-spacing: -0.03em;
+	cursor:default;
+	font-family:SimSun-ExtB;
+}
+
+#c1{
+   position: absolute;
+   top: 50%;
+   margin-top: 0px;
+   left: 0;
+   width: 100%;
+}
+
+#c2 {
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   width:100%;
+   -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+#sastralogo {
+	opacity:1;
+	height: 200px;
+	top:5%;
+	left:40%;
+	position:absolute;
+	z-index:0;
+}
+
+#tifac {
+	opacity:0.1;
+	height:350px;
+	z-index:0;
+	left:25%;
+	bottom:0;
+	position:absolute;
+}
+
+/*** FEED ***/
+
+#feedbox {
+	height:100%;
+	width:100%;
+	overflow-Y:auto;
+}
+
+.feed {
+	position:relative;
+	width:80%;
+	background:rgba(0,0,0,0.3);
+	left:10%;
+	right:10%;
+	margin-top:3%;
+	padding:3%;
+	font-size:large;
+}
+.feed h1 {
+	text-align:center; 
+	color:#41b672;
+}

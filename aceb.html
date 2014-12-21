@@ -5,8 +5,8 @@
 <meta http-equiv="Cache-control" content="no-cache" />
 <title>ACE</title>
 <!-- General -->
-<link rel="alternate stylesheet" href="css/styleblack.css" title="black"/>
-<link rel="stylesheet" href="css/stylewhite.css" title="white"/>
+<link rel="stylesheet" href="css/styleblack.css" title="black"/>
+<link rel="alternate stylesheet" href="css/stylewhite.css" title="white"/>
 <script src="js/jquery-1.9.1.min.js"></script>
 <!-- jQuery UI -->
 <script src="jq/jquery-ui-1.11.0.custom/jquery-ui.js"></script>
@@ -16,8 +16,7 @@
 <body>
 <script>
 
-
-var menuopen=false,snips,snipop=0.08,animating=false;
+var menuopen=false,snips,snipop=0.05,animating=false;
 
 snips = new Array(10);
 snips[0]="#include&lt;iostream&gt;";
@@ -121,6 +120,8 @@ function moveRandom(obj) {
 	$(obj).fadeTo(500,0,function(){
 		$(obj).html(snips[randomFromTo(0,snips.length-1)]);
 		$(obj).css("-webkit-transform","rotate("+rot+"deg)");
+		$(obj).css("-moz-transform","rotate("+rot+"deg)");
+		$(obj).css("-ms-transform","rotate("+rot+"deg)");
 		$(obj).css("font-size",fontSize);
 	});
 	
@@ -148,7 +149,7 @@ setTimeout(function(){
 </script>
 <div id="everything">
     <div id="mb" onmouseover="toclose()" >MENU</div>
-    <a class="link" href="aceb.html"><div id="change">SWITCH TO BLACK</div></a>
+    <a class="link" href="ace.html"><div id="change">SWITCH TO WHITE</div></a>
     
     <!--***************************DIV COUNT***************************************-->
     <div class="snippet"></div>
@@ -161,8 +162,8 @@ setTimeout(function(){
     <div class="snippet"></div>
     <div class="snippet"></div>
     <div class="snippet"></div>
-    
-	<div id="homepage">
+	
+    <div id="homepage">
     	<center><img id="sastralogo" src="images/sastralogo.png" /></center>
         <!--<a id="change" rel="css/styleblack.css">black</a>
         <button id="grayscale">white</button>-->
@@ -181,9 +182,9 @@ setTimeout(function(){
             <div id="center2">
             <ul class="bmenu">
                 <li><a onclick="tomenu()">HOME</a></li>
-                <li><a class="link" href="feed.html">FEED</a></li>
-                <li><a class="link" href="events.html">EVENTS</a></li>
-                <li><a class="link" href="contact.html">CONTACT</a></li>
+                <li><a class="link" href="feedb.html">FEED</a></li>
+                <li><a class="link" href="eventsb.html">EVENTS</a></li>
+                <li><a class="link" href="contactb.html">CONTACT</a></li>
     		</ul>
             </div>
             </div>
